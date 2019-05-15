@@ -1,6 +1,6 @@
 XTL_VERSION=master
 XSIMD_VERSION=master
-XTENSOR_VERSION=master
+XTENSOR_VERSION=reshape_view_assign
 XTENSOR_R_VERSION=master
 
 # xtl
@@ -28,7 +28,7 @@ if [ -d "./inst/include/xtensor" ]
 then
     echo "xtensor headers already vendored in source package"
 else
-    git clone https://github.com/QuantStack/xtensor --branch ${XTENSOR_VERSION}
+    git clone https://github.com/SylvainCorlay/xtensor --branch ${XTENSOR_VERSION}
     DIRECTORY=$(cd `dirname $0` && pwd)
     git -C xtensor apply $DIRECTORY/0001-Remove-pragmas.patch
     cp -r xtensor/include/xtensor ./inst/include
