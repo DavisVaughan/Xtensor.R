@@ -18,3 +18,4 @@ LazyData: true
 Biarch: true
 Suggests: 
     testthat
+SystemRequirements: C++14
